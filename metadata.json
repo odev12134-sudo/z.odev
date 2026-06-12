@@ -1,0 +1,6 @@
+{
+  "name": "Tarot El Kitabı",
+  "description": "Tarot kartlarının anlamları, astrolojik bağlantıları ve yapay zeka destekli tarot okumaları sunan mistik el kitabı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mystic: "Cinzel", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-nat-bg: #F9F7F2;
+  --color-nat-text: #3A362F;
+  --color-nat-heading: #282520;
+  --color-nat-sage: #6B705C;
+  --color-nat-sagedark: #5B614F;
+  --color-nat-muted: #A5A58D;
+  --color-nat-light: #B7B7A4;
+  --color-nat-accent: #D4A373;
+  --color-nat-sandborder: #E6E1D6;
+  --color-nat-sandelem: #F0EDE4;
+
+  --color-gold-50: #fefcf3;
+  --color-gold-100: #fdf5d9;
+  --color-gold-200: #f8e5ab;
+  --color-gold-300: #ecc76e;
+  --color-gold-400: #e0a93c;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b8912c;
+  --color-gold-700: #937123;
+  --color-gold-805: #6d5119;
+}
+
+/* Base custom resets */
+body {
+  background-color: #F9F7F2;
+  color: #3A362F;
+}
+
+/* Custom scrolling list shadows and ambient glow */
+.mystic-glow {
+  box-shadow: 0 4px 20px rgba(107, 112, 92, 0.1);
+}
+
+.mystic-glow-strong {
+  box-shadow: 0 10px 30px rgba(107, 112, 92, 0.15);
+}
+
+.mystic-card {
+  background-color: #ffffff;
+  border: 1px solid #E6E1D6;
+}
+
+.mystic-card:hover {
+  border-color: #A5A58D;
+}
+
+/* Custom card flip animations */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
