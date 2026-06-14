@@ -63,7 +63,7 @@ Lütfen yorumunu şu bölümler halinde yapılandır (Markdown formatında):
 Yazım tarzının akıcı, derin, gizemli ama bir o kadar da yol gösterici, umut verici, dürüst ve tamamen Türkçe olmasına özen göster.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash",
       contents: prompt,
     });
 
