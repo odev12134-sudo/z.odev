@@ -14,7 +14,7 @@ export type TarotReadingInput = {
   spreadType?: string;
 };
 
-const MODEL_NAME = "gemini-3.5-flash";
+const MODEL_NAME = "gemini-1.5-flash";
 
 function resolveApiKey() {
   return (
