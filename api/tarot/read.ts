@@ -66,6 +66,9 @@ Yazım tarzının akıcı, derin, gizemli ama bir o kadar da yol gösterici, umu
     return res.status(200).json({ reading: response.text });
   } catch (error: any) {
     console.error("Tarot reading error:", error);
-    return res.status(500).json({ error: "Tarot okuması yapılırken mistik enerjilerde geçici bir kesinti oluştu. Lütfen tekrar deneyin." });
+    return res.status(500).json({ 
+      error: "Tarot okuması yapılırken mistik enerjilerde geçici bir kesinti oluştu. Lütfen tekrar deneyin.", 
+      details: error?.message || String(error)
+    });
   }
 }

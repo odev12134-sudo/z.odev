@@ -225,7 +225,12 @@ export default function App() {
       });
 
       if (!response.ok) {
-        throw new Error('Okuma yapılırken sunucuda mistik bir hata oluştu.');
+        let errDetails = 'Okuma yapılırken sunucuda mistik bir hata oluştu.';
+        try {
+          const errData = await response.json();
+          errDetails = errData.details || errData.error || errDetails;
+        } catch(e) {}
+        throw new Error(errDetails);
       }
 
       const data = await response.json();
