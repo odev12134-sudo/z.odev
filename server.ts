@@ -11,9 +11,15 @@ app.use(express.json());
 
 const PORT = 3000;
 
+const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.API_KEY;
+
+if (!apiKey) {
+  console.warn("UYARI: API Anahtarı bulunamadı (.env dosyasını kontrol edin).");
+}
+
 // Initialize Gemini SDK with telemetry header
 const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
+  apiKey: apiKey || "dummy-key-to-prevent-crash",
   httpOptions: {
     headers: {
       'User-Agent': 'aistudio-build',

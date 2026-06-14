@@ -17,8 +17,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.API_KEY;
+    
+    if (!apiKey) {
+      return res.status(400).json({ 
+        error: "API Anahtarı bulunamadı. Lütfen Vercel panelinden GEMINI_API_KEY veya GOOGLE_API_KEY değişkenini eklediğinizden emin olun." 
+      });
+    }
+
     const ai = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY,
+      apiKey: apiKey,
       httpOptions: {
         headers: {
           'User-Agent': 'aistudio-build',
